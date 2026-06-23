@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Receipt Ready | Professional Receipt Organization</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --green:#1f4d3a;
+  --green-dark:#122d22;
+  --cream:#f7f3ea;
+  --soft:#eef4ee;
+  --gold:#d8b26e;
+  --text:#24342d;
+  --white:#ffffff;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.6;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+section{
+  padding:85px 7%;
+}
+
+.header{
+  text-align:center;
+  padding:55px 7% 25px;
+  background:linear-gradient(135deg,#f7f3ea,#e7f0e8);
+}
+
+.site-title{
+  font-size:78px;
+  font-weight:900;
+  color:var(--green);
+  line-height:1;
+  letter-spacing:-2px;
+}
+
+.site-subtitle{
+  margin-top:18px;
+  font-size:25px;
+  font-weight:800;
+  color:var(--gold);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  background:linear-gradient(135deg,#f7f3ea,#e7f0e8);
+  padding:55px 7% 90px;
+}
+
+.hero-text h1{
+  font-size:48px;
+  line-height:1.08;
+  color:var(--green);
+  margin-bottom:24px;
+}
+
+.lead{
+  font-size:23px;
+  margin-bottom:28px;
+  max-width:720px;
+}
+
+.button{
+  display:inline-block;
+  background:var(--green);
+  color:white;
+  padding:17px 32px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:18px;
+  box-shadow:0 12px 30px rgba(31,77,58,.25);
+}
+
+.button:hover{
+  background:#2f6a4f;
+}
+
+.hero-img{
+  border-radius:34px;
+  box-shadow:0 30px 80px rgba(0,0,0,.22);
+  overflow:hidden;
+  background:white;
+}
+
+.hero-img img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+}
+
+.photo{
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(0,0,0,.16);
+  overflow:hidden;
+  background:white;
+}
+
+.trust{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  background:var(--green);
+  color:white;
+  padding:22px 7%;
+  text-align:center;
+  font-weight:800;
+}
+
+.trust div{
+  background:rgba(255,255,255,.12);
+  padding:15px;
+  border-radius:16px;
+}
+
+h2{
+  font-size:44px;
+  line-height:1.15;
+  color:var(--green);
+  margin-bottom:18px;
+  text-align:center;
+}
+
+h3{
+  font-size:24px;
+  color:var(--green);
+  margin-bottom:10px;
+}
+
+.center{
+  text-align:center;
+  max-width:930px;
+  margin:0 auto 45px;
+  font-size:21px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;
+}
+
+.card{
+  background:white;
+  padding:34px;
+  border-radius:26px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+  border:1px solid rgba(31,77,58,.08);
+}
+
+.soft{
+  background:var(--soft);
+}
+
+.before-after{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  align-items:start;
+}
+
+.caption{
+  background:white;
+  padding:26px;
+  border-radius:0 0 24px 24px;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
+
+.step{
+  background:white;
+  padding:32px;
+  border-radius:26px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.num{
+  font-size:54px;
+  font-weight:900;
+  color:var(--gold);
+}
+
+.price-card{
+  border-top:8px solid var(--gold);
+}
+
+.price{
+  font-size:46px;
+  font-weight:900;
+  color:var(--green);
+  margin:12px 0;
+}
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.highlight{
+  background:var(--green);
+  color:white;
+  text-align:center;
+}
+
+.highlight h2{
+  color:white;
+}
+
+.highlight .center{
+  color:white;
+}
+
+.faq{
+  max-width:980px;
+  margin:auto;
+}
+
+.faq-item{
+  background:white;
+  margin-bottom:16px;
+  padding:28px;
+  border-radius:22px;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+}
+
+.small{
+  font-size:14px;
+  color:#5d665f;
+  max-width:980px;
+  margin:auto;
+  text-align:center;
+}
+
+ul{
+  list-style:none;
+}
+
+li{
+  margin-bottom:12px;
+  font-size:19px;
+}
+
+.notice{
+  background:#fff8e8;
+  border-left:6px solid var(--gold);
+  padding:24px;
+  border-radius:18px;
+  margin-top:28px;
+}
+
+footer{
+  background:var(--green-dark);
+  color:white;
+  text-align:center;
+  padding:42px 7%;
+}
+
+@media(max-width:900px){
+  .site-title{
+    font-size:48px;
+  }
+
+  .site-subtitle{
+    font-size:17px;
+  }
+
+  .hero,
+  .before-after,
+  .two-col{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:35px;
+  }
+
+  .hero-text h1{
+    font-size:36px;
+  }
+
+  .hero-img img{
+    height:auto;
+  }
+
+  h2{
+    font-size:34px;
+  }
+
+  .trust{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:62px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="site-title">Receipt Ready</div>
+  <div class="site-subtitle">Professional Receipt Organization</div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Send the Pile. Get Your Life Back.</h1>
+
+    <p class="lead">
+      Receipts organized by date and prepared for easier recordkeeping, tax preparation,
+      reimbursement requests, warranty tracking, insurance documentation, and long-term storage.
+    </p>
+
+    <p class="lead">
+      No sorting required. No judgment. Original receipts returned.
+    </p>
+
+    <a class="button" href="mailto:Organize@ReceiptReady.com?subject=Receipt%20Organization%20Request">
+      Get Started
+    </a>
+  </div>
+
+  <div class="hero-img">
+    <img src="images/hero.jpg" alt="Diverse customers holding receipt envelopes">
+  </div>
+</section>
+
+<div class="trust">
+  <div>✓ Organized by Date</div>
+  <div>✓ Original Receipts Returned</div>
+  <div>✓ Binder Optional</div>
+  <div>✓ Mail-In Service</div>
+  <div>✓ No Sorting Required</div>
+</div>
+
+<section>
+  <h2>Bring Order to Your Chaos</h2>
+  <p class="center">
+    Receipts end up in drawers, purses, backpacks, glove compartments, envelopes,
+    kitchen counters, and shoeboxes. Simply gather everything together and send it.
+    Receipt Ready handles the organizing.
+  </p>
+</section>
+
+<section class="soft">
+  <h2>Imagine Opening Your Return Package And Seeing This.</h2>
+  <p class="center">
+    Every receipt carefully organized by date, mounted to standard pages,
+    and ready for easier recordkeeping.
+  </p>
+
+  <div class="before-after">
+    <div>
+      <div class="photo">
+        <img src="images/before.jpg" alt="Messy pile of receipts before organization">
+      </div>
+      <div class="caption">
+        <h3>Before</h3>
+        <p>A growing pile of receipts nobody wants to deal with.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="photo">
+        <img src="images/after.jpg" alt="Organized receipts of different sizes mounted on pages">
+      </div>
+      <div class="caption">
+        <h3>After</h3>
+        <p>Receipts of different shapes and sizes, mounted neatly and organized by date.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How It Works</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Gather</h3>
+      <p>Gather your receipts. No sorting required.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Mail</h3>
+      <p>Mail your receipts to Receipt Ready.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Count & Confirm</h3>
+      <p>Your receipts are counted, and the final price is confirmed before work begins.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <h3>Organize</h3>
+      <p>Receipts are organized by date and mounted onto standard pages.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <h3>Return</h3>
+      <p>Your professionally organized receipt records are returned to you. Binder optional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <h2>Simple Pricing</h2>
+
+  <p class="center">
+    Receipt organization is billed at <strong>$149 per 100 receipts</strong>.
+    After your package is received, receipts are counted and your final total is confirmed before work begins.
+  </p>
+
+  <div class="grid">
+    <div class="card price-card">
+      <h3>1–100 Receipts</h3>
+      <div class="price">$149</div>
+    </div>
+
+    <div class="card price-card">
+      <h3>101–200 Receipts</h3>
+      <div class="price">$298</div>
+    </div>
+
+    <div class="card price-card">
+      <h3>201–300 Receipts</h3>
+      <div class="price">$447</div>
+    </div>
+
+    <div class="card price-card">
+      <h3>301–400 Receipts</h3>
+      <div class="price">$596</div>
+    </div>
+
+    <div class="card price-card">
+      <h3>401–500 Receipts</h3>
+      <div class="price">$745</div>
+    </div>
+
+    <div class="card price-card">
+      <h3>More Than 500</h3>
+      <div class="price">Custom</div>
+      <p>Quoted based on total receipt count.</p>
+    </div>
+  </div>
+
+  <div class="notice">
+    Not sure how many receipts you have? You may count them yourself before mailing, or send the stack as-is.
+    Receipt Ready will count them after arrival and confirm the final total before organizing begins.
+  </div>
+</section>
+
+<section>
+  <h2>Optional Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Professional Binder Assembly</h3>
+      <div class="price">$25</div>
+      <p>Your organized receipt pages returned in a professional binder.</p>
+    </div>
+
+    <div class="card">
+      <h3>Local Pickup & Delivery</h3>
+      <p>Available in select service areas. Additional fees apply.</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <h2>Current Availability</h2>
+  <p class="center">
+    Receipt Ready accepts a limited number of projects at a time to ensure every receipt package receives careful attention.
+    If all project slots are currently full, new requests may be placed on a waiting list and contacted when an opening becomes available.
+  </p>
+</section>
+
+<section>
+  <div class="two-col">
+    <div class="card">
+      <h2 style="text-align:left;">What We Do</h2>
+      <ul>
+        <li>✓ Organize receipts by date</li>
+        <li>✓ Mount receipts onto standard pages</li>
+        <li>✓ Assemble professional binders, if requested</li>
+        <li>✓ Provide professionally organized receipt records</li>
+        <li>✓ Help reduce paper clutter and recordkeeping stress</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 style="text-align:left;">What We Don’t Do</h2>
+      <ul>
+        <li>✗ Bookkeeping</li>
+        <li>✗ Accounting</li>
+        <li>✗ Tax preparation</li>
+        <li>✗ Tax advice</li>
+        <li>✗ Expense categorization</li>
+        <li>✗ Financial services</li>
+        <li>✗ Auditing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <h2>Who Uses Receipt Ready?</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Small Business Owners</h3>
+      <p>Keep expenses organized without losing work time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Freelancers</h3>
+      <p>Prepare for recordkeeping and tax season with less stress.</p>
+    </div>
+
+    <div class="card">
+      <h3>Independent Contractors</h3>
+      <p>Organize job-related receipts and records.</p>
+    </div>
+
+    <div class="card">
+      <h3>Artists & Creators</h3>
+      <p>Keep project expenses and supply receipts organized.</p>
+    </div>
+
+    <div class="card">
+      <h3>Families</h3>
+      <p>Reduce paper clutter and organize household records.</p>
+    </div>
+
+    <div class="card">
+      <h3>Estate Executors</h3>
+      <p>Bring order to accumulated paperwork.</p>
+    </div>
+
+    <div class="card">
+      <h3>Insurance Claim Filers</h3>
+      <p>Prepare receipt records for easier review.</p>
+    </div>
+
+    <div class="card">
+      <h3>Shoebox Receipt People</h3>
+      <p>No judgment. This service is made for you.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="two-col">
+    <div>
+      <h2 style="text-align:left;">Why Customers Love This</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>You Save Time</h3>
+          <p>No sorting. No date-ordering. No weekend lost.</p>
+        </div>
+
+        <div class="card">
+          <h3>You Reduce Stress</h3>
+          <p>No more receipt piles staring at you.</p>
+        </div>
+
+        <div class="card">
+          <h3>You Stay Organized</h3>
+          <p>Your receipts come back in date order.</p>
+        </div>
+
+        <div class="card">
+          <h3>You Gain Peace of Mind</h3>
+          <p>Your records are easier to review, store, and share.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="images/workspace.jpg" alt="Organized workspace with binders and receipts">
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="two-col">
+    <div class="photo">
+      <img src="images/mail.jpg" alt="Envelope of receipts being mailed">
+    </div>
+
+    <div>
+      <h2 style="text-align:left;">Simply Gather. Receipt Ready Organizes.</h2>
+      <p class="lead">
+        Place your receipts in an envelope or box, mail them in, and receive them back professionally organized.
+      </p>
+      <p>
+        This service is designed to feel easy from the first step. No shame. No lecture. No complicated system to learn.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Do I need to sort anything?</h3>
+      <p>No. Just gather your receipts and send them.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How is pricing calculated?</h3>
+      <p>Pricing is $149 per 100 receipts. After your package is received, receipts are counted and your final total is confirmed before work begins.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if I do not know how many receipts I have?</h3>
+      <p>You may count them before mailing, or send the stack as-is. Receipt Ready will count the receipts after arrival and confirm the final total before organizing begins.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you prepare taxes?</h3>
+      <p>No. Receipt Ready provides receipt organization services only.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Will I get my original receipts back?</h3>
+      <p>Yes. Your original receipts are returned as professionally organized receipt records.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I request a binder?</h3>
+      <p>Yes. Professional binder assembly is optional.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What about faded thermal receipts?</h3>
+      <p>Some receipts fade over time, especially thermal paper receipts. Receipt Ready will handle receipts carefully, but faded, damaged, or unreadable receipts may not be fully legible.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I mail receipts from anywhere?</h3>
+      <p>Yes. Receipt Ready is designed as a mail-in service.</p>
+    </div>
+  </div>
+</section>
+
+<section class="highlight">
+  <h2>Let’s Get Your Receipts Organized</h2>
+  <p class="center">
+    One shipment. One organized return package. One less thing to worry about.
+  </p>
+
+  <a class="button" href="mailto:Organize@ReceiptReady.com?subject=Receipt%20Organization%20Request">
+    Email Organize@ReceiptReady.com
+  </a>
+</section>
+
+<section class="soft">
+  <p class="small">
+    <strong>Disclaimer:</strong> Receipt Ready provides receipt organization services only.
+    Receipt Ready does not provide bookkeeping, accounting, tax preparation, tax advice,
+    financial advice, legal advice, expense categorization, or auditing services.
+    Customers should consult their accountant, tax preparer, bookkeeper, or other qualified
+    professional regarding tax filings and financial decisions.
+  </p>
+</section>
+
+<footer>
+  <strong>Receipt Ready</strong><br>
+  Professional Receipt Organization<br>
+  Send the Pile. Get Your Life Back.<br>
+  Organize@ReceiptReady.com<br><br>
+  © 2026 Receipt Ready
+</footer>
+
+</body>
+</html>
